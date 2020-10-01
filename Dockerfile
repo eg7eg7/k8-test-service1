@@ -5,7 +5,6 @@ WORKDIR /usr/src/app
 COPY * ./
 
 RUN npm install
-
 RUN npm run tsc
 
 EXPOSE 5000
