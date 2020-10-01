@@ -4,7 +4,7 @@ export default function createServer() {
   var app = express();
 
   app.get("/", (req: any, res: { send: (arg0: string) => any }) =>
-    res.send("Service 1")
+    res.send("Service 1 - Update 1")
   );
 
   return app;
