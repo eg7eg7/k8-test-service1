@@ -1,12 +1,10 @@
-FROM node:12
+FROM alpine
 
-WORKDIR /usr/src/app
+RUN apk add -U ca-certificates
 
-COPY * ./
+COPY static/ /static/
+COPY api-service1 /
 
-RUN npm install
-RUN npm run tsc
+ENV PORT 8080
 
-EXPOSE 5000
-
-CMD ["node", "./build/start.js"]
+CMD ["/api-service1"]
