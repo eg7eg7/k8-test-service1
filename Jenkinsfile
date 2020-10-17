@@ -10,7 +10,6 @@ pipeline {
       steps {
         checkout scm
         sh '''
-          // docker run --rm -v "${PWD}":/go/src/seanmeme -w /go/src/seanmeme -e CGO_ENABLED=0 golang:1.8 go build
           docker build -t $IMAGE_NAME:$BUILD_ID .
         '''
       }
